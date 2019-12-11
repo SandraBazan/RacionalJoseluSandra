@@ -105,5 +105,11 @@ public class Racional {
         
         return resta;
     }
-    
+    //Metodo producto
+    public void producto(Racional x){
+        //Guarda en el numerador el valor del producto de los numeradores
+        this.a = a*x.getA();
+        //Guarda en el denominador el valor del producto de los denominadores
+        this.b = b*x.getB();
+    }
 }
