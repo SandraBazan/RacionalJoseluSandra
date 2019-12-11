@@ -21,4 +21,20 @@ public class Racional {
         this.a = 1;
         this.b = 1;
     }
+    
+    // Constructor parametrizado con control de denominador no sea 0
+    // En tal caso se le asigna el valor 1 y se muestra por consola
+    // indicando que no es valido y se asigna el valor 1.
+    
+    public Racional(int a, int b){
+        this.a = a;
+        
+        if (b == 0){
+            System.out.println("El valor no es válido y se le asigna el valor 1");
+            this.b = 1;
+        }else{
+            this.b  = b;
+        }
+        
+    }
 }
