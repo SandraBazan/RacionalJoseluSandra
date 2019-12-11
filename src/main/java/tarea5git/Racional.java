@@ -75,35 +75,29 @@ public class Racional {
     }
     
     // Metodo suma
-    public int suma(Racional x){
-        // Creamos un auxiliar para que nos ayude con la operación
-        int suma;
-        
+    public void suma(Racional x){
         // Si los denominadores son iguales se usa este if
         if (x.getB() == b){
-            suma = (a+x.getA())/b;
+            this.a = a+x.getA();
+            this.b = b;
         // Si los denominadors son diferentes se usa el else
         }else{
-            suma = (a*x.getB()+(b*x.getA())/(b*x.getB()));
-        }     
-        
-        return suma;
+            this.a = a*x.getB()+b*x.getA();
+            this.b = b*x.getB();
+        }    
     }
     
-    // Metodo resta
-    public int resta(Racional x){
-        // Creamos un auxiliar para que nos ayude con la operación
-        int resta;
-        
+    // Metodo suma
+    public void resta(Racional x){
         // Si los denominadores son iguales se usa este if
         if (x.getB() == b){
-            resta = (a-x.getA())/b;
+            this.a = a-x.getA();
+            this.b = b;
         // Si los denominadors son diferentes se usa el else
         }else{
-            resta = (a*x.getB()-(b*x.getA())/(b*x.getB()));
-        }     
-        
-        return resta;
+            this.a = a*x.getB()-b*x.getA();
+            this.b = b*x.getB();
+        }    
     }
     // Metodo producto
     public void producto(Racional x){
