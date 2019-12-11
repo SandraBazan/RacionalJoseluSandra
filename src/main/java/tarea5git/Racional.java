@@ -64,6 +64,11 @@ public class Racional {
         }
     }
     
+    // Método imprimirConsola()
+    public void imprimirConsola(){
+        System.out.println("Número racional "+this.a+"/"+this.b);
+    }
+    
     
     
 }
