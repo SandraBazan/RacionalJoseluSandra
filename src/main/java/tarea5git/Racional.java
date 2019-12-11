@@ -123,9 +123,9 @@ public class Racional {
         }
         return igualdad;
     }
-    
+
     // Método aleatorio
-    public static Racional aleatorio(){
+    public static Racional aleatorio() {
         // Creamos un random
         Random aleatorio = new Random();
         // Creamos un número racional con números aleatorios
