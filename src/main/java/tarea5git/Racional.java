@@ -90,4 +90,20 @@ public class Racional {
         return suma;
     }
     
+    //Metodo resta
+    public int resta(Racional x){
+        //Creamos un auxiliar para que nos ayude con la operación
+        int resta;
+        
+        //Si los denominadores son iguales se usa este if
+        if (x.getB() == b){
+            resta = (a-x.getA())/b;
+        //Si los denominadors son diferentes se usa el else
+        }else{
+            resta = (a*x.getB()-(b*x.getA())/(b*x.getB()));
+        }     
+        
+        return resta;
+    }
+    
 }
