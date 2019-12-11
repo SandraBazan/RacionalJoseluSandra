@@ -37,7 +37,9 @@ public class Racional {
         }
         
     }
-
+    
+    // Métodos Get de los atributos
+    
     public int getA() {
         return a;
     }
@@ -45,6 +47,23 @@ public class Racional {
     public int getB() {
         return b;
     }
+    
+    // Métodos Set de los atributos
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public void setB(int b) {
+        // Controlo la restricción del constructor parametrizado
+        if (b == 0){
+            System.out.println("El valor no es válido y se le asigna el valor 1");
+            this.b = 1;
+        }else{
+            this.b  = b;
+        }
+    }
+    
     
     
 }
