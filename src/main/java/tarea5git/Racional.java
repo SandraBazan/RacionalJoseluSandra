@@ -74,15 +74,15 @@ public class Racional {
         return  a + "/" + b;
     }
     
-    //Metodo suma
+    // Metodo suma
     public int suma(Racional x){
-        //Creamos un auxiliar para que nos ayude con la operación
+        // Creamos un auxiliar para que nos ayude con la operación
         int suma;
         
-        //Si los denominadores son iguales se usa este if
+        // Si los denominadores son iguales se usa este if
         if (x.getB() == b){
             suma = (a+x.getA())/b;
-        //Si los denominadors son diferentes se usa el else
+        // Si los denominadors son diferentes se usa el else
         }else{
             suma = (a*x.getB()+(b*x.getA())/(b*x.getB()));
         }     
@@ -90,26 +90,32 @@ public class Racional {
         return suma;
     }
     
-    //Metodo resta
+    // Metodo resta
     public int resta(Racional x){
-        //Creamos un auxiliar para que nos ayude con la operación
+        // Creamos un auxiliar para que nos ayude con la operación
         int resta;
         
-        //Si los denominadores son iguales se usa este if
+        // Si los denominadores son iguales se usa este if
         if (x.getB() == b){
             resta = (a-x.getA())/b;
-        //Si los denominadors son diferentes se usa el else
+        // Si los denominadors son diferentes se usa el else
         }else{
             resta = (a*x.getB()-(b*x.getA())/(b*x.getB()));
         }     
         
         return resta;
     }
-    //Metodo producto
+    // Metodo producto
     public void producto(Racional x){
-        //Guarda en el numerador el valor del producto de los numeradores
+        // Guarda en el numerador el valor del producto de los numeradores
         this.a = a*x.getA();
-        //Guarda en el denominador el valor del producto de los denominadores
+        // Guarda en el denominador el valor del producto de los denominadores
         this.b = b*x.getB();
     }
+    
+    // Método división
+    public Racional division(Racional x, Racional y){
+        return new Racional(x.getA()*y.getB(), x.getB()*y.getA());
+    }
+    
 }
