@@ -37,4 +37,14 @@ public class Racional {
         }
         
     }
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
+    }
+    
+    
 }
