@@ -74,6 +74,20 @@ public class Racional {
         return  a + "/" + b;
     }
     
-    
+    //Metodo suma
+    public int suma(Racional x){
+        //Creamos un auxiliar para que nos ayude con la operación
+        int suma;
+        
+        //Si los denominadores son iguales se usa este if
+        if (x.getB() == b){
+            suma = (a+x.getA())/b;
+        //Si los denominadors son diferentes se usa el else
+        }else{
+            suma = (a*x.getB()+(b*x.getA())/(b*x.getB()));
+        }     
+        
+        return suma;
+    }
     
 }
