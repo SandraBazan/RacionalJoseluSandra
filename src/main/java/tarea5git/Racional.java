@@ -5,6 +5,8 @@
  */
 package tarea5git;
 
+import java.util.Random;
+
 /**
  *
  * @author sandra
@@ -120,5 +122,13 @@ public class Racional {
             igualdad = false;
         }
         return igualdad;
+    }
+    
+    // Método aleatorio
+    public static Racional aleatorio(){
+        // Creamos un random
+        Random aleatorio = new Random();
+        // Creamos un número racional con números aleatorios
+        return new Racional(aleatorio.nextInt(), aleatorio.nextInt());
     }
 }
